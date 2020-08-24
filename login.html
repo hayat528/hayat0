@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block heading %}
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <title>login page</title>
+
+   {% endblock %}
+   {% block body %}
+<marquee behavior="scroll" direction="down" scrollamount="1" height="70px" hspace="100px" vspace="5px" width="300px" onmouseover="this.stop();"
+           onmouseout="this.start();">WELCOME TO CALCI STORE</marquee>
+
+
+
+
+     <form>
+       <div class="form-group">
+         <label for="exampleInputEmail1">Email address</label>
+         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+       </div>
+       <div class="form-group">
+         <label for="exampleInputPassword1">Password</label>
+         <input type="password" class="form-control" id="exampleInputPassword1">
+       </div>
+   </form>
+
+   <button type="button" class="btn btn-primary btn-lg">Login</button>
+   <form action="{{ url_for('signin') }}">
+    <button type="button" class="btn btn-secondary btn-lg"><a href="signup.html">Sign Up</button></a>
+  </form>
+
+{% endblock %}
